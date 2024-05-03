@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>Editer une séance</h1>
+        <div class="py-4">
+            <a class="btn btn-outline-primary" href="{{ path('app_calendar') }}">Retour vers l'accueil</a>
+        </div>
+        {{ form_start(form) }}
+        <img class="w-25" src="{{ show.movie.poster }}" alt="{{ 'Affiche du film : ' ~ show.movie.title }}" >
+        {{ form_widget(form) }}
+        <button class="btn btn-outline-primary">{{ button_label|default('Enregistrer') }}</button>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

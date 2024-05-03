@@ -1,0 +1,58 @@
+<div class="col-lg-6">
+
+	{{ form_start(form) }}
+
+	<div class="row">
+		{{ form_errors(form) }}
+	</div>
+
+	
+	<h3>{{ show.movie.title }}</h3>
+	
+	<div class="row pb-5">
+		<div class="col-6">
+			{{ form_label(form.showtime) }}
+			{{ form_widget(form.showtime) }}
+		</div>
+		
+		<div class="col">
+			{{ form_label(form.screen) }}
+			{{ form_widget(form.screen) }}
+		</div>
+	</div>
+	<div class="row ">
+		{{ form_label(form.versions) }}
+		{{ form_widget(form.versions) }}
+	</div>
+	<div class="row pb-3">
+		{{ form_label(form.trailersDuration) }}
+		<div class="col-3"> {{ form_widget(form.trailersDuration.minutes) }}</div>
+		<div class="col-3"> {{ form_label(form.trailersDuration.minutes) }}</div>
+	</div>
+	<div class="row">
+		<div class="col-6">
+			{{ form_label(form.presentationDuration) }}
+			<div class="row">
+				<div class="col-6"> {{ form_widget(form.presentationDuration.minutes) }}</div>
+				<div class="col-6"> {{ form_label(form.presentationDuration.minutes) }}</div>
+			</div>
+		</div>
+		<div class="col-6">
+			{{ form_label(form.debateDuration) }}
+			<div class="row">
+				<div class="col-6"> {{ form_widget(form.debateDuration.minutes) }}</div>
+				<div class="col-6"> {{ form_label(form.debateDuration.minutes) }}</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row pt-4">
+		<button class="btn btn-outline-primary">{{ button_label|default('Enregistrer') }}</button>
+	
+	</div>
+	
+	{{ form_widget(form._token) }}
+	{{ form_end(form, {render_rest: false}) }}
+</div>
+
+

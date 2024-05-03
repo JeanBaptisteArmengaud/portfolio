@@ -1,0 +1,83 @@
+<div class="col">
+
+	{{ form_start(form) }}
+
+	<div class="row">
+		{{ form_errors(form) }}
+	</div>
+
+	<div class="row">
+			<div class="row">
+				{{ form_row(form.title) }}
+			</div>
+		
+			<div class="row">
+				{{ form_row(form.poster) }}
+			</div>
+		
+			<div class="row">
+				{{ form_row(form.versions) }}
+			</div>
+		
+			<div class="row justify-content-start">
+				<div class="col-4">
+					
+					<div class="row">
+						{{ form_label(form.duration) }}
+						<div class="col-4"> {{ form_row(form.duration.hours) }}</div>
+						<div class="col-4"> {{ form_row(form.duration.minutes) }}</div>
+					</div>
+					
+					<div class="row">
+						{{ form_row(form.releaseDate) }}
+					</div>
+					
+					<div class="row">
+						{{ form_label(form.screeningSchedules,'Semaines de programmation') }}
+						<ul class="screeningSchedules"
+							data-index="{{ form.screeningSchedules|length > 0 ? form.screeningSchedules|last.vars.name + 1 : 0 }}"
+							data-prototype="{{ form_widget(form.screeningSchedules.vars.prototype)|e('html_attr') }}"
+						>
+							
+							{% for week in form.screeningSchedules %}
+								<li>
+									{{ form_widget(week) }}
+								</li>
+							{% endfor %}
+						</ul>
+						<button type="button" class="btn btn-outline-secondary add_item_link" data-collection-holder-class="screeningSchedules">
+							Ajouter une semaine
+						</button>
+					</div>
+				</div>
+				
+				{%  if movie.id is not null %}
+				<div class="col text-center align-middle">
+					<label>Liste des séances</label>
+					{% if movie.shows is not empty %}
+						{%  for show in movie.shows %}
+							<ul class="list-unstyled">
+								<li>{{ show.showtime|format_datetime('full', 'short')|capitalize }}</li>
+							</ul>
+						{% endfor %}
+					{% else %}
+						<p>Aucune séance programmée</p>
+					{% endif %}
+					<a href="{{ path('app_calendar_movie_shows', {'id': movie.id}) }}" class="btn btn-sm btn-outline-secondary">Gestion des séances</a>
+				</div>
+				{% endif %}
+			</div>
+		
+	</div>
+	
+	<div class="row pt-4">
+		<button class="btn btn-outline-primary">{{ button_label|default('Enregistrer') }}</button>
+	</div>
+	
+	{{ form_widget(form._token) }}
+	{{ form_end(form, {render_rest: false}) }}
+	
+</div>
+
+
+

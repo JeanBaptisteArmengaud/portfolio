@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>Calendar</title>{% endblock %}
+
+{% block head %}
+    <link href="{{ asset('fullcalendar/main.css') }}" rel='stylesheet' />
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        {% include 'calendar/_navbar.html.twig' %}
+        <div id='movies' class="list-group list-group-horizontal">
+        </div>
+        <div id='calendar' data-shows="{{ jsonEvents }}">
+        </div>
+    </div>
+{% endblock %}
+
+
+
+{%  block script %}
+    <script src="{{ asset('fullcalendar/main.js') }}"></script>
+    <script src="{{ asset('fullcalendar/locales/fr.js') }}"></script>
+    <script src="{{ asset('js/calendar/calendar.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,7 @@
+<form class="d-inline-block" method="post" action="{{ path('app_calendar_delete_movie', {'id': movie.id}) }}" onsubmit="return confirm('Supprimer le film ?');">
+	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ movie.id) }}">
+	<button class="btn btn-outline-danger mt-2">Supprimer le film</button>
+	<div class="form-text mb-0 help-text">La suppression du film sera impossible si des séances sont programmées.</div>
+</form>
+
+

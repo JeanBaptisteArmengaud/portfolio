@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>Liste des films</title>{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        {% include 'calendar/_navbar.html.twig' %}
+        
+        <h1>Liste des films</h1>
+    
+        <a href="{{ path('app_calendar_admin_new_movie') }}" class="btn btn-primary mb-2">Ajouter un film</a>
+    
+        {{ include('_flash_messages.html.twig') }}
+    
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+{#                <th>Id</th>#}
+                <th>Titre</th>
+                <th>Date de sortie</th>
+                <th>Durée</th>
+                <th>Versions</th>
+                <th>Affiche</th>
+                <th>Programmation</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for movie in moviesList %}
+                <tr>
+{#                    <td>{{ movie.id }}</td>#}
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.releaseDate ? movie.releaseDate|date('d-m-Y') : '' }}</td>
+                    <td>{{ movie.duration|date("%hh%I") }}</td>
+                    <td>
+                        <ul class="col-6 list-unstyled list-group list-group-horizontal">
+                            {% for version in movie.versions %}
+                                <li class="list-group-item">{{ version.name}}</li>
+                            {% endfor %}
+                        </ul>
+                        
+                    </td>
+                    <td><img src="{{ movie.poster }}" height="40"></td>
+                    <td>
+                        {% for week in movie.screeningSchedules %}
+                            <ul>
+                                <li>{{ week.weekStart|date('d-m-Y') }}</li>
+                            </ul>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {#                    <a href="{{ path('back_movie_show', {'id': movie.id}) }}" class="btn btn-sm btn-primary">show</a>#}
+                        <a href="{{ path('app_calendar_admin_edit_movie', {'id': movie.id}) }}" class="btn btn-sm btn-success">Editer</a>
+{#                        {% if movie.shows is not empty %}#}
+                            <a href="{{ path('app_calendar_movie_shows', {'id': movie.id}) }}" class="btn btn-sm btn-warning">Séances</a>
+{#                        {% endif %}#}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="10">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

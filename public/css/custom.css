@@ -1,0 +1,10 @@
+    .nav-link[data-bs-toggle].collapsed:after {
+        content: ' \25B6';
+    }
+    .nav-link[data-bs-toggle]:not(.collapsed):after {
+        content: ' \25BC';
+    }
+
+    .movie-poster {
+        height: 390px;
+    }
