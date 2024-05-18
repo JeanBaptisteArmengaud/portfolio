@@ -12,7 +12,12 @@ use Symfony\Component\Serializer\SerializerInterface;
 
 class CalendarController extends AbstractController
 {
-    #[Route('/calendar', name: 'app_calendar', host: 'progcine.jbarmengaud.com')]
+    #[Route(
+        '/',
+        name: 'app_calendar',
+        host: '{subdomain}.jbarmengaud.com',
+        defaults: ['subdomain' => 'progcine'],
+        requirements: ['subdomain' => 'progcine|test.progcine'],)]
     public function index(ManagerRegistry $doctrine, SerializerInterface $serializer): Response
     {
         $showsList = $doctrine->getRepository(Show::class)->findAll();
