@@ -35,7 +35,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #28587b;
-  --bs-secondary: #ff6a00;
+  --bs-secondary: #b5c6e0;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -43,7 +43,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 40, 88, 123;
-  --bs-secondary-rgb: 255, 106, 0;
+  --bs-secondary-rgb: 181, 198, 224;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -73,8 +73,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #ee0979;
-  --bs-link-hover-color: #be0761;
+  --bs-link-color: 0, 0, 0, 0.7;
+  --bs-link-hover-color: 0, 0, 0, 0.3;
   --bs-code-color: #ee0979;
   --bs-highlight-bg: #fff3cd;
 }
@@ -3255,14 +3255,21 @@ textarea.form-control-lg {
   color: var(--bs-dropdown-color);
   text-align: left;
   list-style: none;
-  background-color: var(--bs-dropdown-bg);
-  background-clip: padding-box;
-  border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
-  border-radius: var(--bs-dropdown-border-radius);
+  /*background-color: var(--bs-dropdown-bg);*/
+  background-color: rgba(40, 88, 123, 0.8);
+  background-clip: border-box;
+  border: 0;
+  border-radius: 0;
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;
   left: 0;
+  /*margin-top: var(--bs-dropdown-spacer);*/
+  margin-top: 1.1rem;
+}
+
+div.navbar-collapse.show .dropdown-menu[data-bs-popper] {
+  background-color: transparent;
   margin-top: var(--bs-dropdown-spacer);
 }
 
@@ -3736,11 +3743,11 @@ textarea.form-control-lg {
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
-  --bs-navbar-brand-padding-y: 0.3125rem;
+  --bs-navbar-brand-padding-y: 0;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
-  --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
-  --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
+  --bs-navbar-brand-color: rgba(0, 0, 0, 0.8);
+  --bs-navbar-brand-hover-color: rgba(0, 0, 0, 1);
   --bs-navbar-nav-link-padding-x: 0.5rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
@@ -10836,8 +10843,11 @@ textarea.form-control-lg {
   }
 }
 
+body {
+  padding-top: 3.375rem;
 
-.subheading {
+
+  .subheading {
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
   font-weight: 500;
@@ -10845,9 +10855,9 @@ textarea.form-control-lg {
 }
 
 .navbar-custom {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: rgba(40, 88, 123, 0.7);
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  background-color: rgba(40, 88, 123, 0.8);
 }
 .navbar-custom .navbar-brand {
   text-transform: uppercase;
@@ -10878,7 +10888,7 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 .social-icons .social-icon:hover {
-  background-color: #bd5d38;
+  background-color: var(--bs-primary);
 }
 
 .dev-icons {

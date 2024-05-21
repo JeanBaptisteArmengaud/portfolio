@@ -1,10 +1,38 @@
-    .nav-link[data-bs-toggle].collapsed:after {
-        content: ' \25B6';
-    }
-    .nav-link[data-bs-toggle]:not(.collapsed):after {
-        content: ' \25BC';
-    }
+/*.nav-link[data-bs-toggle].collapsed:after {*/
+/*    content: ' \25B4';*/
+/*}*/
+/*.nav-link[data-bs-toggle]:not(.collapsed):after {*/
+/*    content: ' \25BC';*/
+/*}*/
 
-    .movie-poster {
-        height: 390px;
-    }
+.movie-poster {
+    height: 390px;
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: var(--bs-white);
+
+}
+.underline {
+    text-decoration: underline;
+    text-decoration-thickness: 0.25rem;
+    text-underline-offset: 0.4rem;
+    padding-right: 0.2rem;
+}
+.overline {
+    text-decoration: overline;
+    text-decoration-thickness: 0.25rem;
+    text-underline-offset: 0.4rem;
+    padding-top: 0.6rem;
+
+}
