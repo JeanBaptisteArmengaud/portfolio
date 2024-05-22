@@ -9,5 +9,4 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
-
 });
