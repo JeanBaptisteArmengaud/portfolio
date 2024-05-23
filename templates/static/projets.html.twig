@@ -12,45 +12,68 @@
 <div class="container px-5">
     <!-- Projects Section-->
     <section class="py-5">
-{#        <div class="container mb-5">#}
-            <div class="text-center mb-5">
-                <h1 class="mb-0">Projets</h1>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <div class="col-12">
-                    <h2>Projet de fin de formation</h2>
-                    <!-- Project Card 1-->
-                    <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                        <div class="card-body p-0">
-                            <div class="d-flex align-items-center">
-                                <div class="p-5">
-                                    <h3 class="fw-bolder">Watch'art</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at enim eum illum aperiam placeat esse? Mollitia omnis minima saepe recusandae libero, iste ad asperiores! Explicabo commodi quo itaque! Ipsam!</p>
-                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="/watchart" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
-                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="">En savoir plus</a>
-                                </div>
-                                <img class="card-img-top" src="{{ asset('assets/img/logo_White.png')}}" alt="logo_watchart" height="400px"/>
+        <div class="text-center mb-5">
+            <h1 class="mb-0">Projets</h1>
+        </div>
+        <div class="col-12">
+            <!-- Project Card 1-->
+            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                <div class="row g-0 flex-column-reverse flex-lg-row">
+                    <div class="col-12 col-lg-8">
+                        <div class="card-body text-center text-lg-start">
+                            <h2 class="card-title fw-bolder">Watch'art</h2>
+                            <h4 class="subheading">Projet de fin de formation</h4>
+                            <p class="card-text">Voici un exemple de texte pour accompagner l'image. Vous pouvez ajouter plus de contenu ici.</p>
+                            <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
+                            <div class="d-grid gap-2 d-md-block">
+                                <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="/watchart" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
+                                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="">En savoir plus</a>
                             </div>
                         </div>
                     </div>
-                    <h2>Projet personnel</h2>
-                    <!-- Project Card 2-->
-                    <div class="card overflow-hidden shadow rounded-4 border-0">
-                        <div class="card-body p-0">
-                            <div class="d-flex align-items-center">
-                                <img class="card-img-top" src="{{ asset('assets/img/prog_cine_liste_films.png')}}" alt="liste_films" height="400px"/>
-                                <div class="p-5">
-                                    <h2 class="fw-bolder">Programmation de séances de cinéma</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at enim eum illum aperiam placeat esse? Mollitia omnis minima saepe recusandae libero, iste ad asperiores! Explicabo commodi quo itaque! Ipsam!</p>
-                                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="/calendar" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
-                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="">En savoir plus</a>
-                                </div>
+                    <div class="col-12 col-lg-4">
+                        <img src="{{ asset('assets/img/logo_White.png')}}" class="img-fluid rounded-start w-100" alt="logo_watchart" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 2 -->
+            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                <div class="row g-0 flex-column flex-lg-row">
+                    <div class="col-12 col-lg-4">
+                        <img src="{{ asset('assets/img/prog_cine_liste_films.png')}}" class="img-fluid rounded-start w-100" alt="logo_watchart" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <div class="card-body text-center text-lg-start">
+                            <h2 class="card-title fw-bolder">Outil de programmation de séances de cinéma</h2>
+                            <h4 class="subheading">Projet personnel</h4>
+                            <p class="card-text">Voici un exemple de texte pour accompagner l'image. Vous pouvez ajouter plus de contenu ici.</p>
+                            <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
+                            <div class="d-grid gap-2 d-md-block">
+                                <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="/calendar" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
+                                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="">En savoir plus</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-{#        </div>#}
+        </div>
     </section>
 </div>
+{% endblock %}
+
+{% block modales %}
+    <!-- Modale image -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ asset('assets/img/prog_cine_liste_films.png') }}" class="img-fluid" alt="Image" id="modalImage">
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
