@@ -16,44 +16,69 @@
             <h1 class="mb-0">Projets</h1>
         </div>
         <div class="col-12">
-            <!-- Project Card 1-->
-            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                <div class="row g-0 flex-column-reverse flex-lg-row">
+            <!-- Projet formation -->
+            <div class="card overflow-hidden shadow rounded-4 border-1 mb-5">
+                <div class="row g-0 flex-column-reverse flex-lg-row h-100">
                     <div class="col-12 col-lg-8">
-                        <div class="card-body text-center text-lg-start">
+                        <div class="card-body text-center text-lg-start h-100">
                             <h2 class="card-title fw-bolder">Watch'art</h2>
                             <h4 class="subheading">Projet de fin de formation</h4>
                             <p class="card-text">Voici un exemple de texte pour accompagner l'image. Vous pouvez ajouter plus de contenu ici.</p>
                             <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
-                            <div class="d-grid gap-2 d-md-block">
-                                <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="/watchart" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
-                                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="">En savoir plus</a>
+                            <div class="collapse" id="collapseContent">
+                                <p class="card-text">Voici le reste du contenu de la card qui est caché au début et visible après avoir cliqué sur le bouton.</p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/AgLvuQ2HLzw?si=DACZKbsJ_PFLXMG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap align-items-end">
+                                <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder flex-grow-1 flex-md-grow-0" href="/watchart" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
+                                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder flex-grow-1 flex-md-grow-0" data-bs-toggle="collapse" href="#collapseContent" role="button" aria-expanded="false" aria-controls="collapseContent">En savoir plus &nbsp;<i class="fa-solid fa-chevron-down"></i><i class="fa-solid fa-chevron-up"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
-                        <img src="{{ asset('assets/img/logo_White.png')}}" class="img-fluid rounded-start w-100" alt="logo_watchart" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <div class="col-12 col-lg-4 card-img-wrapper">
+                        <img src="{{ asset('assets/img/logo_White.png')}}" class="img-fluid rounded-start card-img" alt="logo_watchart" data-bs-toggle="modal" data-bs-target="#imageModal">
                     </div>
                 </div>
             </div>
             
-            <!-- Project Card 2 -->
+            <!-- Projet perso -->
             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                 <div class="row g-0 flex-column flex-lg-row">
-                    <div class="col-12 col-lg-4">
-                        <img src="{{ asset('assets/img/prog_cine_liste_films.png')}}" class="img-fluid rounded-start w-100" alt="logo_watchart" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <div class="col-12 col-lg-4 align-self-center" style="cursor: pointer">
+                        <img src="{{ asset('assets/img/prog_cine_liste_films.png')}}" class="img-fluid rounded-start w-100" alt="programmation_cine_liste_films" data-bs-toggle="modal" data-bs-target="#imageModal">
                     </div>
                     <div class="col-12 col-lg-8">
                         <div class="card-body text-center text-lg-start">
-                            <h2 class="card-title fw-bolder">Outil de programmation de séances de cinéma</h2>
+                            <h2 class="card-title fw-bolder">Prog ciné</h2>
                             <h4 class="subheading">Projet personnel</h4>
-                            <p class="card-text">Voici un exemple de texte pour accompagner l'image. Vous pouvez ajouter plus de contenu ici.</p>
+                            <p class="card-text">Outil de programmation de séances de cinéma. Voici un exemple de texte pour accompagner l'image. Vous pouvez ajouter plus de contenu ici.</p>
                             <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
                             <div class="d-grid gap-2 d-md-block">
                                 <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="/calendar" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
                                 <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="">En savoir plus</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projets pro -->
+            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                <div class="row g-0 flex-column flex-lg-row">
+                    <div class="col-12 col-lg-8">
+                        <div class="card-body text-center text-lg-start">
+                            <h2 class="card-title fw-bolder">Yesss Electrique</h2>
+                            <h4 class="subheading">Projets professionnels</h4>
+                            <p class="card-text">Programmes et fonctionnalités créés chez Yesss Electrique. Voici un exemple de texte pour accompagner l'image. Vous pouvez ajouter plus de contenu ici.</p>
+                            <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
+                            <div class="d-grid gap-2 d-md-block">
+{#                                <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="/calendar" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>#}
+                                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 align-self-center" style="cursor: pointer">
+                        <img src="{{ asset('assets/img/yesss-electrique.png')}}" class="img-fluid rounded-start w-100" alt="logo_yesss_electrique" data-bs-toggle="modal" data-bs-target="#imageModal">
                     </div>
                 </div>
             </div>

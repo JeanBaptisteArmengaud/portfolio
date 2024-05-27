@@ -37,3 +37,32 @@
 
 }
 
+.btn-outline-dark[aria-expanded="true"] .fa-chevron-down {
+    display: none;
+}
+.btn-outline-dark[aria-expanded="false"] .fa-chevron-up {
+    display: none;
+}
+
+.card {
+    height: 100%;
+}
+.card-img-wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+.card-img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.d-flex.align-items-end {
+    margin-top: auto;
+}
