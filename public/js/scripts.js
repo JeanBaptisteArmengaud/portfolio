@@ -1,12 +1,20 @@
-/*!
-* Start Bootstrap - Resume v7.0.5 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-//
-// Scripts
-//
-
 window.addEventListener('DOMContentLoaded', event => {
+    const modalImage = document.getElementById('modalImage');
+    const imageModal = document.getElementById('imageModal');
 
+    document.querySelectorAll('img[data-bs-toggle="modal"]').forEach(function(img) {
+        img.addEventListener('click', function() {
+
+            if (this.classList.contains('capture')) {
+                imageModal.firstElementChild.classList.add('modal-fullscreen');
+                imageModal.firstElementChild.classList.remove('modal-xl');
+            } else {
+                imageModal.firstElementChild.classList.remove('modal-fullscreen');
+                imageModal.firstElementChild.classList.add('modal-xl');
+            }
+
+            const imageUrl = this.getAttribute('src');
+            modalImage.src = imageUrl;
+        });
+    });
 });

@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block body %}
-<div class="container px-5">
+<div class="container px-lg-5">
     <!-- Projects Section-->
     <section class="py-5">
         <div class="text-center mb-5">
@@ -17,46 +17,69 @@
         </div>
         <div class="col-12">
             <!-- Projet formation -->
-            <div class="card overflow-hidden shadow rounded-4 border-1 mb-5">
+            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                 <div class="row g-0 flex-column-reverse flex-lg-row h-100">
                     <div class="col-12 col-lg-8">
                         <div class="card-body text-center text-lg-start h-100">
                             <h2 class="card-title fw-bolder">Watch'art</h2>
-                            <h4 class="subheading">Projet de fin de formation</h4>
-                            <p class="card-text">Voici un exemple de texte pour accompagner l'image. Vous pouvez ajouter plus de contenu ici.</p>
-                            <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
-                            <div class="collapse" id="collapseContent">
-                                <p class="card-text">Voici le reste du contenu de la card qui est caché au début et visible après avoir cliqué sur le bouton.</p>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/AgLvuQ2HLzw?si=DACZKbsJ_PFLXMG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <h3 class="subheading">Projet de fin de formation</h3>
+                            <p class="card-text">Projet réalisé en équipe de 5 personnes durant 4 semaines : 3 développeurs front et 2 développeurs back.</p>
+                            <p class="card-text"><small class="text-muted">Terminé en juillet 2022</small></p>
+                            
+                            <div class="collapse" id="watchartCollapseContent">
+                                <p class="card-text">Fonctionnalités : ce que l'utilisateur peut voir/faire</p>
+                                <h4 class="card-text">Présentation du site sur YouTube à l'ensemble de la promotion :</h4>
+                                <div class="col-12">
+                                    <iframe class="video" src="https://www.youtube.com/embed/WjrPnFDAWpw?si=U1lmRniwl8BCjewm&amp;start=3799" title="Presentation Watchart" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
                             </div>
-                            <div class="d-flex gap-2 flex-wrap align-items-end">
-                                <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder flex-grow-1 flex-md-grow-0" href="/watchart" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
-                                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder flex-grow-1 flex-md-grow-0" data-bs-toggle="collapse" href="#collapseContent" role="button" aria-expanded="false" aria-controls="collapseContent">En savoir plus &nbsp;<i class="fa-solid fa-chevron-down"></i><i class="fa-solid fa-chevron-up"></i></a>
+                            
+                            <div class="d-flex gap-2 flex-wrap align-items-end justify-content-center">
+                                <a class="collapse-button" data-bs-toggle="collapse" href="#watchartCollapseContent" role="button" aria-expanded="false" aria-controls="watchartCollapseContent">
+                                    <i class="bi bi-chevron-compact-down"></i>
+                                    <i class="bi bi-chevron-compact-up"></i>
+                                </a>
                             </div>
+                            
+                            <a class="btn btn-primary btn-lg mt-3 py-3 fs-6 fw-bolder" href="/watchart" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
+                        
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4 card-img-wrapper">
-                        <img src="{{ asset('assets/img/logo_White.png')}}" class="img-fluid rounded-start card-img" alt="logo_watchart" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <div class="col-12 col-lg-4 card-img-watchart">
+                        <img src="{{ asset('assets/img/projets/logo_White.png')}}" class="img-fluid rounded-start" alt="logo_watchart" data-bs-toggle="modal" data-bs-target="#imageModal">
                     </div>
                 </div>
             </div>
             
             <!-- Projet perso -->
             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                <div class="row g-0 flex-column flex-lg-row">
-                    <div class="col-12 col-lg-4 align-self-center" style="cursor: pointer">
-                        <img src="{{ asset('assets/img/prog_cine_liste_films.png')}}" class="img-fluid rounded-start w-100" alt="programmation_cine_liste_films" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <div class="row g-0 flex-column flex-lg-row h-100">
+                    <div class="col-12 col-lg-4 card-img-progcine">
+                        <img src="{{ asset('assets/img/projets/prog_cine_calendrier.png')}}" class="img-fluid rounded-start w-100" alt="programmation_cine_liste_films" data-bs-toggle="modal" data-bs-target="#imageModal">
                     </div>
                     <div class="col-12 col-lg-8">
-                        <div class="card-body text-center text-lg-start">
+                        <div class="card-body text-center text-lg-start h-100">
                             <h2 class="card-title fw-bolder">Prog ciné</h2>
                             <h4 class="subheading">Projet personnel</h4>
                             <p class="card-text">Outil de programmation de séances de cinéma. Voici un exemple de texte pour accompagner l'image. Vous pouvez ajouter plus de contenu ici.</p>
-                            <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
-                            <div class="d-grid gap-2 d-md-block">
-                                <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="/calendar" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
-                                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="">En savoir plus</a>
+                            <p class="card-text"><small class="text-muted">Projet en cours de développement</small></p>
+                            
+                            <div class="collapse" id="progcineCollapseContent">
+                                <p class="card-text">Fonctionnalités : ce que l'utilisateur peut voir/faire</p>
+                                <h4 class="card-text">Présentation du site sur YouTube à l'ensemble de la promotion :</h4>
+                                <div class="col-12">
+                                    <iframe class="video" src="https://www.youtube.com/embed/WjrPnFDAWpw?si=U1lmRniwl8BCjewm&amp;start=3799" title="Presentation Watchart" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
                             </div>
+                            <div class="d-flex gap-2 flex-wrap align-items-end justify-content-center">
+                                <a class="collapse-button" data-bs-toggle="collapse" href="#progcineCollapseContent" role="button" aria-expanded="false" aria-controls="progcineCollapseContent">
+                                    <i class="bi bi-chevron-compact-down"></i>
+                                    <i class="bi bi-chevron-compact-up"></i>
+                                </a>
+                            </div>
+                            
+                            <a class="btn btn-primary btn-lg mt-3 py-3 fs-6 fw-bolder" href="/calendar" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
+                        
                         </div>
                     </div>
                 </div>
@@ -64,21 +87,29 @@
             
             <!-- Projets pro -->
             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                <div class="row g-0 flex-column flex-lg-row">
+                <div class="row g-0 flex-column-reverse flex-lg-row h-100">
                     <div class="col-12 col-lg-8">
-                        <div class="card-body text-center text-lg-start">
+                        <div class="card-body text-center text-lg-start h-100">
                             <h2 class="card-title fw-bolder">Yesss Electrique</h2>
                             <h4 class="subheading">Projets professionnels</h4>
                             <p class="card-text">Programmes et fonctionnalités créés chez Yesss Electrique. Voici un exemple de texte pour accompagner l'image. Vous pouvez ajouter plus de contenu ici.</p>
-                            <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
-                            <div class="d-grid gap-2 d-md-block">
-{#                                <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="/calendar" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>#}
-                                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="">En savoir plus</a>
+                            
+                            <div class="collapse" id="yesssCollapseContent">
+                                <p class="card-text">Fonctionnalités : ce que l'utilisateur peut voir/faire</p>
+                                <h4 class="card-text">Présentation du site sur YouTube à l'ensemble de la promotion :</h4>
+                                <img src="{{ asset('assets/img/projets/yesss/stocks.png')}}" class="capture img-fluid rounded-start w-100" alt="yesss_electrique_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            </div>
+                           
+                            <div class="d-flex gap-2 flex-wrap align-items-end justify-content-center">
+                                <a class="collapse-button" data-bs-toggle="collapse" href="#yesssCollapseContent" role="button" aria-expanded="false" aria-controls="yesssCollapseContent">
+                                    <i class="bi bi-chevron-compact-down"></i>
+                                    <i class="bi bi-chevron-compact-up"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4 align-self-center" style="cursor: pointer">
-                        <img src="{{ asset('assets/img/yesss-electrique.png')}}" class="img-fluid rounded-start w-100" alt="logo_yesss_electrique" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <div class="col-12 col-lg-4 card-img-yesss">
+                        <img src="{{ asset('assets/img/projets/yesss/logo_yesss-electrique.png')}}" class="img-fluid rounded-start w-100" alt="logo_yesss_electrique" data-bs-toggle="modal" data-bs-target="#imageModal">
                     </div>
                 </div>
             </div>
@@ -90,13 +121,13 @@
 {% block modales %}
     <!-- Modale image -->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="{{ asset('assets/img/prog_cine_liste_films.png') }}" class="img-fluid" alt="Image" id="modalImage">
+                    <img src="" class="img-fluid" alt="Image" id="modalImage">
                 </div>
             </div>
         </div>
