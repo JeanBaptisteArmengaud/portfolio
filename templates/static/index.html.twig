@@ -1,11 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    <title>Accueil - JB Armengaud</title>
+    <title>JB Armengaud</title>
 {% endblock %}
 
 {% block body %}
-<div class="container-fluid p-0">
+<!-- Page Content-->
+<div class="container px-5">
     <!-- About-->
     <section class="resume-section" id="about">
         <div class="resume-section-content">
@@ -14,8 +15,128 @@
                 <span class="text-primary">Armengaud</span>
             </h1>
             <div class="subheading mb-5">
-                Développeur web backend
+                Développeur web
             </div>
+            <p class="lead mb-5">
+                Après avoir travaillé près de 8 ans dans un cinéma associatif, j'ai effectué une reconversion professionnelle en 2022 pour devenir développeur web PHP/Symfony.<br>
+                Suite à un premier poste de développeur web fullstack, je suis à la recherche d’une nouvelle expérience professionnelle.<br>
+                Retrouvez ici toutes les informations sur mon parcours et mes projets personnels et professionnels.<br>
+            </p>
+            <div class="social-icons">
+                <a class="social-icon" href="mailto:contact@jbarmengaud.com" title="Email"><i class="fa-regular fa-envelope"></i></a>
+                <a class="social-icon" href="tel:+33601979739" title="06 01 97 97 39"><i class="fa-solid fa-phone"></i></a>
+                <a class="social-icon" href="https://www.linkedin.com/in/jean-baptiste-armengaud-36697470/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://github.com/JeanBaptisteArmengaud" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a class="social-icon" href="{{ asset('assets/pdf/CV_JeanBaptisteArmengaud.pdf') }}" target="_blank" title="Télécharger mon CV"><i class="fa-regular fa-file-lines"></i></a>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+    <!-- Skills-->
+    <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Compétences</h2>
+            <div class="subheading mb-3">Langages de programmation &amp; outils</div>
+            <ul class="list-inline dev-icons">
+                <li class="list-inline-item"><i class="fab fa-html5" title="HTML"></i><h5>HTML</h5></li>
+                <li class="list-inline-item"><i class="fab fa-css3-alt" title="CSS"></i><h5 class="text-center">CSS</h5></li>
+                <li class="list-inline-item"><i class="fa-brands fa-bootstrap"></i><h5>Bootstrap</h5></li>
+                <br>
+                <li class="list-inline-item"><i class="fab fa-js-square" title="Javascript"></i><h5>Javascript</h5></li>
+                <li class="list-inline-item"><img src="{{ asset('assets/img/presentation/jquery-icon.svg') }}"><h5>jQuery</h5></li>
+                <br>
+                <li class="list-inline-item"><i class="fab fa-php" title="PHP"></i><h5>PHP</h5></li>
+                <li class="list-inline-item"><i class="fab fa-symfony" title="Symfony"></i><h5>Symfony</h5></li>
+                <br>
+                <li class="list-inline-item"><i class="fa-solid fa-database"></i><h5>MySQL</h5></li>
+                <li class="list-inline-item"><i class="fa-solid fa-code"></i><h5>PhpStorm</h5></li>
+            </ul>
+            <div class="subheading mb-3">Aptitudes</div>
+            <ul class="fa-ul mb-0">
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Curiosité / Autonomie / Souci du détail
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Aime résoudre des problèmes
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Travail en équipe
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>
+                    Agile / Scrum
+                </li>
+            </ul>
+        </div>
+    </section>
+    <hr class="m-0" />
+    
+    <section class="resume-section" id="experience">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Expériences professionnelles</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Développeur web fullstack</h3>
+                    <div class="subheading mb-3">Yesss Electrique</div>
+                    <ul>
+                        <li>MVC maison / PHP / JQuery / Bootstrap 3/4/5 / Twig / MySQL</li>
+                        <li>Correction et ajout de fonctionnalités sur les 3 sites principaux de l’entreprise : <br>
+                            site interne, site public et site e-commerce BtoB<br>
+                            Plus d'informations dans la section Projets
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">Janvier 2023 - Aujourd'hui</span></div>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+    
+    <section class="resume-section" id="education">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Formations</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Ecole O'Clock</h3>
+                    <div class="subheading mb-3">Formation Développeur web spécialisation PHP/Symfony</div>
+                    <div>
+                        <ul>
+                            <li>4 mois de socle : HTML, CSS, PHP, Javascript, POO, MVC</li>
+                            <li>1 mois de spécialisation sur le framework Symfony</li>
+                            <li>1 mois de projet en équipe : conception et développement d'une application web : Watch'Art, carte interactive avec points d'intérêts</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">Janvier 2022 - Juin 2022</span></div>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+    
+    <section class="resume-section" id="interests">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Centres d'intérêts</h2>
+            <p>Outre ma passion pour les nouvelles technologies et l'informatique, j'ai à la base effectué mes études et la première partie de ma carrière dans un domaine qui me passionne depuis toujours : le cinéma. Je suis aussi très friand de nouvelles découvertes musicales dans les genres pop, rock, et musiques électroniques.</p>
+            <p class="mb-0">J'aime aussi énormément les Lego, les jeux vidéo (narratifs, puzzles, gestion, TPS, etc), le monde de l'automobile ainsi que la question des mobilités, notamment électriques.</p>
+        </div>
+    </section>
+    <hr class="m-0" />
+    
+    <section class="resume-section" id="awards">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Certifications professionnelles</h2>
+            <ul class="fa-ul mb-0">
+                <li>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <span class="fa-li"><i class="fa-solid fa-award"></i>&nbsp;</span>
+                        <p><a href="https://www.francecompetences.fr/recherche/rncp/37674/">Titre Professionnel de niveau 5</a> :  Développeur web et web mobile
+                        <div class="flex-shrink-0"><span class="text-primary">Octobre 2022</span></div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 </div>

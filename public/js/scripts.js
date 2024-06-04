@@ -1,37 +1,20 @@
-/*!
-* Start Bootstrap - Resume v7.0.5 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-//
-// Scripts
-//
-
 window.addEventListener('DOMContentLoaded', event => {
+    const modalImage = document.getElementById('modalImage');
+    const imageModal = document.getElementById('imageModal');
 
-    if (window.location.origin ==  '/presentation') {
-        // Activate Bootstrap scrollspy on the main nav element
-        const sideNav = document.body.querySelector('#sideNav');
-        if (sideNav) {
-            new bootstrap.ScrollSpy(document.body, {
-                target: '#sideNav',
-                offset: 74,
-            });
-        };
-    }
+    document.querySelectorAll('img[data-bs-toggle="modal"]').forEach(function(img) {
+        img.addEventListener('click', function() {
 
-
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
+            if (this.classList.contains('capture')) {
+                imageModal.firstElementChild.classList.add('modal-fullscreen');
+                imageModal.firstElementChild.classList.remove('modal-xl');
+            } else {
+                imageModal.firstElementChild.classList.remove('modal-fullscreen');
+                imageModal.firstElementChild.classList.add('modal-xl');
             }
+
+            const imageUrl = this.getAttribute('src');
+            modalImage.src = imageUrl;
         });
     });
-
 });

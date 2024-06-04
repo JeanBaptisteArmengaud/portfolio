@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    <title>Jean-Baptiste Armengaud</title>
+{% endblock %}
+
+{% block presentation_menu %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container px-lg-5">
+    <!-- Projects Section-->
+    <section class="py-5">
+        <div class="text-center mb-5">
+            <h1 class="mb-0">Projets</h1>
+        </div>
+        <div class="col-12">
+            <!-- Projet formation -->
+            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                <div class="row g-0 flex-column-reverse flex-lg-row h-100">
+                    <div class="col-12 col-lg-8">
+                        <div class="card-body text-center text-lg-start h-100">
+                            <h2 class="card-title fw-bolder">Watch'art</h2>
+                            <h3 class="subheading">Projet de fin de formation</h3>
+                            <p class="card-text">Watch'art est une carte interactive permettant d'ajouter et de consulter des points d'intérêts artistiques à n'importe quel endroit du globe.</p>
+                            <p class="card-text"><small class="text-muted">Terminé en juillet 2022</small></p>
+                            
+                            <div class="collapse" id="watchartCollapseContent">
+                                <p class="card-text">L'équipe était composée de 3 développeurs front (Hector Colard, Odelin Zadra et Michael Bar) et 2 développeurs back (Thibaud Guignard et moi-même).</p>
+                                <p class="card-text">Le projet a été réalisé en suivant la méthode Scrum, en quasi totale autonomie, sur 4 sprints d'une semaine chacun durant le mois de juin 2022.</p>
+                                <p class="card-text">
+                                    Les technologies front-end utilisées sont React, Leaflet.
+                                    Pour la partie back-end nous avons créé une API REST avec le framework Symfony avec une base de données en MySQL.
+                                </p>
+                                <h4 class="card-text">Présentation de l'application à l'ensemble de la promotion sur YouTube :</h4>
+                                <div class="col-12">
+                                    <iframe class="video" src="https://www.youtube.com/embed/WjrPnFDAWpw?si=pA7vDZnMfOjTn2jW&amp;start=3797" title="Presentation Watchart" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex gap-2 flex-wrap align-items-end justify-content-center">
+                                <a class="collapse-button" data-bs-toggle="collapse" href="#watchartCollapseContent" role="button" aria-expanded="false" aria-controls="watchartCollapseContent">
+                                    <i class="bi bi-chevron-compact-down"></i>
+                                    <i class="bi bi-chevron-compact-up"></i>
+                                </a>
+                            </div>
+                            
+                            <a class="btn btn-primary btn-lg mt-3 py-3 fs-6 fw-bolder" href="/watchart" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
+                        
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 card-img-watchart">
+                        <img src="{{ asset('assets/img/projets/logo_White.png')}}" class="img-fluid rounded-start" alt="logo_watchart" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projet perso -->
+            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                <div class="row g-0 flex-column flex-lg-row h-100">
+                    <div class="col-12 col-lg-4 card-img-progcine">
+                        <img src="{{ asset('assets/img/projets/prog_cine_calendrier.png')}}" class="img-fluid rounded-start w-100" alt="programmation_cine_liste_films" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <div class="card-body text-center text-lg-start h-100">
+                            <h2 class="card-title fw-bolder">Prog ciné</h2>
+                            <h4 class="subheading">Projet personnel</h4>
+                            <p class="card-text">Outil de programmation de séances de cinéma.</p>
+                            <p class="card-text"><small class="text-muted">Projet en cours de développement</small></p>
+                            
+                            <div class="collapse" id="progcineCollapseContent">
+                                <p class="card-text">
+                                    Ce projet est né d'un besoin que j'avais en travaillant durant près de 8 ans dans un cinéma associatif avec près de 70 bénévoles, répartis dans différentes équipes (administratif, caisse, projection, contrôle, restauration, etc).
+                                    Je cherche ici à créer un outil permettant à la fois de faire la planification précise des séances de cinéma et d'organiser la gestion des équipes bénévoles nécessaires à leur bon déroulement.
+                                </p>
+                                <p class="card-text">Les technologies utilisées pour ce projet sont le framework Symfony (version 6.1 puis 6.4) avec la librairie Javascript FullCalendar (version 5).</p>
+                                <h4 class="card-text">Fonctionnalités existantes :</h4>
+                                <ul class="">
+                                    <li>Création/modificiation/suppression d'une fiche film (titre, URL de l'affiche, versions, durée, date de sortie)</li>
+                                    <li>Ajout/modification/suppression de semaines de programmation</li>
+                                    <li>Ajout/modification/suppression de séances sur ces semaines, soit via un formulaire soit par simple glisser-déposer sur le calendrier.</li>
+                                </ul>
+                                <h4 class="card-text">Fonctionnalités à venir :</h4>
+                                <ul class="">
+                                    <li>Gestion de profils utilisateurs (admin et user) pour gérér l'inscription des bénévoles des différentes équipes sur les séances</li>
+                                </ul>
+                            
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap align-items-end justify-content-center">
+                                <a class="collapse-button" data-bs-toggle="collapse" href="#progcineCollapseContent" role="button" aria-expanded="false" aria-controls="progcineCollapseContent">
+                                    <i class="bi bi-chevron-compact-down"></i>
+                                    <i class="bi bi-chevron-compact-up"></i>
+                                </a>
+                            </div>
+                            
+                            <a class="btn btn-primary btn-lg mt-3 py-3 fs-6 fw-bolder" href="/calendar" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projets pro -->
+            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                <div class="row g-0 flex-column-reverse flex-lg-row h-100">
+                    <div class="col-12 col-lg-8">
+                        <div class="card-body text-center text-lg-start h-100">
+                            <h2 class="card-title fw-bolder">Yesss Electrique</h2>
+                            <h4 class="subheading">Projets professionnels</h4>
+                            <p class="card-text">Quelques exemples de programmes et fonctionnalités créés pour les sites (interne et public) de Yesss Electrique...</p>
+                            <p class="card-text"><small class="text-muted">Tickets réalisés entre Janvier 2023 et Avril 2024</small></p>
+                            
+                            <div class="collapse" id="yesssCollapseContent">
+                                <h4 class="card-text">Site interne : programme de consultation des stocks des plateformes logistiques</h4>
+                                <ul>
+                                    <li>Dynamisation de la liste des plateformes et des fournisseurs produits</li>
+                                </ul>
+                                <img src="{{ asset('assets/img/projets/yesss/stocks.png')}}" class="capture img-fluid rounded-start w-100" alt="yesss_electrique_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            </div>
+                           
+                            <div class="d-flex gap-2 flex-wrap align-items-end justify-content-center">
+                                <a class="collapse-button" data-bs-toggle="collapse" href="#yesssCollapseContent" role="button" aria-expanded="false" aria-controls="yesssCollapseContent">
+                                    <i class="bi bi-chevron-compact-down"></i>
+                                    <i class="bi bi-chevron-compact-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 card-img-yesss">
+                        <img src="{{ asset('assets/img/projets/yesss/logo_yesss-electrique.png')}}" class="img-fluid rounded-start w-100" alt="logo_yesss_electrique" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block modales %}
+    <!-- Modale image -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" class="img-fluid" alt="Image" id="modalImage">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
