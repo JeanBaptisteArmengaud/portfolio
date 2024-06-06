@@ -1,5 +1,5 @@
 # Portfolio
 
 ## Cinema Calendar
-[See Calendar ReadMe](../calendar/docs/calendar.md)
+[See Calendar ReadMe](../docs/calendar.md)
 
