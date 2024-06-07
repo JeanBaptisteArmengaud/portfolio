@@ -36,6 +36,19 @@ projets:
         # whether or not caching should apply for client caches only
         private: true
 
+# Pour dynamisation cards projets
+#        context:
+#            projets:
+#                - title:
+#                  subtitle:
+#                  picture:
+#                  status:
+#                  blur-text:
+#                  collapse-text:
+#                  collapse-pictures:
+#                      - src:
+#                        description:
+
 watchart:
     path: /watchart
     controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController

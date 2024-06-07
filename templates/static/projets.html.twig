@@ -16,42 +16,86 @@
             <h1 class="mb-0">Projets</h1>
         </div>
         <div class="col-12">
-            <!-- Projet formation -->
+            <!-- Projets pro -->
             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                 <div class="row g-0 flex-column-reverse flex-lg-row h-100">
                     <div class="col-12 col-lg-8">
                         <div class="card-body text-center text-lg-start h-100">
-                            <h2 class="card-title fw-bolder">Watch'art</h2>
-                            <h3 class="subheading">Projet de fin de formation</h3>
-                            <p class="card-text">Watch'art est une carte interactive permettant d'ajouter et de consulter des points d'intérêts artistiques à n'importe quel endroit du globe.</p>
-                            <p class="card-text"><small class="text-muted">Terminé en juillet 2022</small></p>
+                            <h2 class="card-title fw-bolder">Yesss Electrique</h2>
+                            <h4 class="subheading">Projets professionnels</h4>
+                            <p class="card-text"><small class="text-muted">Réalisés entre Janvier 2023 et Mai 2024</small></p>
                             
-                            <div class="collapse" id="watchartCollapseContent">
-                                <p class="card-text">L'équipe était composée de 3 développeurs front (Hector Colard, Odelin Zadra et Michael Bar) et 2 développeurs back (Thibaud Guignard et moi-même).</p>
-                                <p class="card-text">Le projet a été réalisé en suivant la méthode Scrum, en quasi totale autonomie, sur 4 sprints d'une semaine chacun durant le mois de juin 2022.</p>
-                                <p class="card-text">
-                                    Les technologies front-end utilisées sont React, Leaflet.
-                                    Pour la partie back-end nous avons créé une API REST avec le framework Symfony avec une base de données en MySQL.
-                                </p>
-                                <h4 class="card-text">Présentation de l'application à l'ensemble de la promotion sur YouTube :</h4>
-                                <div class="col-12">
-                                    <iframe class="video" src="https://www.youtube.com/embed/WjrPnFDAWpw?si=pA7vDZnMfOjTn2jW&amp;start=3797" title="Presentation Watchart" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <p class="card-text blur-text blur-end">
+                                Durant presque un  an et demi, j'ai été chargé de diverses missions chez Yesss Electrique.<br>
+                                Allant de la correction de bug à la création de nouveaux programmes complets, en passant par l'ajout ou la modification de fonctionnalités, voici quelques exemples de mes réalisations.
+                            </p>
+                            
+                            <div class="collapse" id="yesssCollapseContent">
+                                <div id="carouselYesss" class="carousel carousel-dark slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="{{ asset('assets/img/projets/yesss/stocks.png')}}" class="capture img-fluid rounded w-100" alt="yesss_electrique_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                            <div class="carousel-caption w-100">
+                                                <h4>Site interne : consultation des stocks des plateformes logistiques</h4>
+                                                <ul>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Dynamisation de la liste des plateformes et des fournisseurs produits</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Gestion de l'affichage de toutes les plateformes et sélection multiple des fournisseurs produits</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Ajout de filtres de tri par catégorie produit (jusqu'à 4 niveaux)</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Refonte totale de l'export Excel (image suivante)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('assets/img/projets/yesss/excel_stocks_plateformes.png')}}" class="capture img-fluid rounded w-100" alt="yesss_electrique_excel_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                            <div class="carousel-caption">
+                                                <h4>Export Excel : consultation des stocks plateformes</h4>
+                                                <ul>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Dynamisation de la liste des plateformes et des fournisseurs produits</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Gestion de l'affichage de toutes les plateformes et sélection multiple des fournisseurs produits</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Ajout de filtres de tri par catégorie produit (jusqu'à 4 niveaux)</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Refonte totale de l'export Excel (image suivante)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('assets/img/projets/yesss/historique-client.png')}}" class="capture img-fluid rounded w-100" alt="yesss_electrique_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                            <div class="carousel-caption">
+                                                <h4>Third slide label</h4>
+                                                <p>Some representative placeholder content for the third slide.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselYesss" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Stocks plateformes"></button>
+                                        <button type="button" data-bs-target="#carouselYesss" data-bs-slide-to="1" aria-label="Export Excel Stocks plateformes"></button>
+                                        <button type="button" data-bs-target="#carouselYesss" data-bs-slide-to="2" aria-label="Historiques clients"></button>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselYesss" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Précédente</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselYesss" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Suivante</span>
+                                    </button>
                                 </div>
+                                
+                                {#                                <img src="{{ asset('assets/img/projets/yesss/stocks.png')}}" class="capture img-fluid rounded-start w-100" alt="yesss_electrique_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">#}
                             </div>
                             
                             <div class="d-flex gap-2 flex-wrap align-items-end justify-content-center">
-                                <a class="collapse-button" data-bs-toggle="collapse" href="#watchartCollapseContent" role="button" aria-expanded="false" aria-controls="watchartCollapseContent">
+                                <a class="collapse-button" data-bs-toggle="collapse" href="#yesssCollapseContent" role="button" aria-expanded="false" aria-controls="yesssCollapseContent">
                                     <i class="bi bi-chevron-compact-down"></i>
                                     <i class="bi bi-chevron-compact-up"></i>
                                 </a>
                             </div>
                             
-                            <a class="btn btn-primary btn-lg mt-3 py-3 fs-6 fw-bolder" href="/watchart" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
+                            <a class="btn btn-primary btn-lg mt-3 py-3 fs-6 fw-bolder" href="https://yesss.fr" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site public</a>
                         
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4 card-img-watchart">
-                        <img src="{{ asset('assets/img/projets/logo_White.png')}}" class="img-fluid rounded-start" alt="logo_watchart" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <div class="col-12 col-lg-4 card-img-yesss">
+                        <img src="{{ asset('assets/img/projets/yesss/logo_yesss-electrique.png')}}" class="img-fluid rounded-start w-100" alt="logo_yesss_electrique" data-bs-toggle="modal" data-bs-target="#imageModal">
                     </div>
                 </div>
             </div>
@@ -66,14 +110,15 @@
                         <div class="card-body text-center text-lg-start h-100">
                             <h2 class="card-title fw-bolder">Prog ciné</h2>
                             <h4 class="subheading">Projet personnel</h4>
+                            <p class="card-text"><small class="text-muted">En cours de développement</small></p>
+                            
                             <p class="card-text">Outil de programmation de séances de cinéma.</p>
-                            <p class="card-text"><small class="text-muted">Projet en cours de développement</small></p>
+                            <p class="card-text blur-text blur-end">
+                                L'idée de ce projet est née d'un besoin que j'avais en travaillant durant près de 8 ans dans un cinéma associatif avec près de 70 bénévoles, répartis dans différentes équipes (administratif, caisse, projection, contrôle, restauration, etc).
+                            </p>
                             
                             <div class="collapse" id="progcineCollapseContent">
-                                <p class="card-text">
-                                    Ce projet est né d'un besoin que j'avais en travaillant durant près de 8 ans dans un cinéma associatif avec près de 70 bénévoles, répartis dans différentes équipes (administratif, caisse, projection, contrôle, restauration, etc).
-                                    Je cherche ici à créer un outil permettant à la fois de faire la planification précise des séances de cinéma et d'organiser la gestion des équipes bénévoles nécessaires à leur bon déroulement.
-                                </p>
+                                <p class="card-text">Je cherche ici à créer un outil permettant à la fois de faire la planification précise des séances de cinéma et d'organiser la gestion des équipes bénévoles nécessaires à leur bon déroulement.</p>
                                 <p class="card-text">Les technologies utilisées pour ce projet sont le framework Symfony (version 6.1 puis 6.4) avec la librairie Javascript FullCalendar (version 5).</p>
                                 <h4 class="card-text">Fonctionnalités existantes :</h4>
                                 <ul class="">
@@ -101,34 +146,44 @@
                 </div>
             </div>
             
-            <!-- Projets pro -->
+            <!-- Projet formation -->
             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                 <div class="row g-0 flex-column-reverse flex-lg-row h-100">
                     <div class="col-12 col-lg-8">
                         <div class="card-body text-center text-lg-start h-100">
-                            <h2 class="card-title fw-bolder">Yesss Electrique</h2>
-                            <h4 class="subheading">Projets professionnels</h4>
-                            <p class="card-text">Quelques exemples de programmes et fonctionnalités créés pour les sites (interne et public) de Yesss Electrique...</p>
-                            <p class="card-text"><small class="text-muted">Tickets réalisés entre Janvier 2023 et Avril 2024</small></p>
+                            <h2 class="card-title fw-bolder">Watch'art</h2>
+                            <h3 class="subheading">Projet de fin de formation</h3>
+                            <p class="card-text"><small class="text-muted">Terminé en juillet 2022</small></p>
                             
-                            <div class="collapse" id="yesssCollapseContent">
-                                <h4 class="card-text">Site interne : programme de consultation des stocks des plateformes logistiques</h4>
-                                <ul>
-                                    <li>Dynamisation de la liste des plateformes et des fournisseurs produits</li>
-                                </ul>
-                                <img src="{{ asset('assets/img/projets/yesss/stocks.png')}}" class="capture img-fluid rounded-start w-100" alt="yesss_electrique_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            <p class="card-text">Watch'art est une carte interactive permettant d'ajouter et de consulter des points d'intérêts artistiques à n'importe quel endroit du globe.</p>
+                            <p class="card-text blur-text blur-end">L'équipe était composée de 3 développeurs front (Hector Colard, Odelin Zadra et Michael Bar) et 2 développeurs back (Thibaud Guignard et moi-même).</p>
+                            
+                            
+                            <div class="collapse" id="watchartCollapseContent">
+                                <p class="card-text">Le projet a été réalisé en suivant la méthode Scrum, en quasi totale autonomie, sur 4 sprints d'une semaine chacun durant le mois de juin 2022.</p>
+                                <p class="card-text">
+                                    Les technologies front-end utilisées sont React, Leaflet.
+                                    Pour la partie back-end nous avons créé une API REST avec le framework Symfony avec une base de données en MySQL.
+                                </p>
+                                <h4 class="card-text">Présentation de l'application à l'ensemble de la promotion sur YouTube :</h4>
+                                <div class="col-12">
+                                    <iframe class="video" src="https://www.youtube.com/embed/WjrPnFDAWpw?si=pA7vDZnMfOjTn2jW&amp;start=3797" title="Presentation Watchart" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
                             </div>
-                           
-                            <div class="d-flex gap-2 flex-wrap align-items-end justify-content-center">
-                                <a class="collapse-button" data-bs-toggle="collapse" href="#yesssCollapseContent" role="button" aria-expanded="false" aria-controls="yesssCollapseContent">
+                            
+                            <div class="collapse-button-div d-flex gap-2 flex-wrap align-items-end justify-content-center">
+                                <a class="collapse-button" data-bs-toggle="collapse" href="#watchartCollapseContent" role="button" aria-expanded="false" aria-controls="watchartCollapseContent">
                                     <i class="bi bi-chevron-compact-down"></i>
                                     <i class="bi bi-chevron-compact-up"></i>
                                 </a>
                             </div>
+                            
+                            <a class="btn btn-primary btn-lg mt-3 py-3 fs-6 fw-bolder" href="/watchart" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Accéder au site</a>
+                        
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4 card-img-yesss">
-                        <img src="{{ asset('assets/img/projets/yesss/logo_yesss-electrique.png')}}" class="img-fluid rounded-start w-100" alt="logo_yesss_electrique" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <div class="col-12 col-lg-4 card-img-watchart">
+                        <img src="{{ asset('assets/img/projets/logo_White.png')}}" class="img-fluid rounded-start" alt="logo_watchart" data-bs-toggle="modal" data-bs-target="#imageModal">
                     </div>
                 </div>
             </div>
