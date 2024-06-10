@@ -29,6 +29,11 @@
                 <a class="social-icon" href="https://github.com/JeanBaptisteArmengaud" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a class="social-icon" href="{{ asset('assets/pdf/CV_JeanBaptisteArmengaud.pdf') }}" target="_blank" title="Télécharger mon CV"><i class="fa-regular fa-file-lines"></i></a>
             </div>
+            <div class=" d-none d-md-flex gap-2 flex-wrap align-items-end justify-content-center">
+                <a class="collapse-button" href="/#skills">
+                    <i class="bi bi-chevron-compact-down"></i>
+                </a>
+            </div>
         </div>
     </section>
     <hr class="m-0" />
@@ -38,18 +43,18 @@
             <h2 class="mb-5">Compétences</h2>
             <div class="subheading mb-3">Langages de programmation &amp; outils</div>
             <ul class="list-inline dev-icons">
-                <li class="list-inline-item"><i class="fab fa-html5" title="HTML"></i><h5>HTML</h5></li>
-                <li class="list-inline-item"><i class="fab fa-css3-alt" title="CSS"></i><h5 class="text-center">CSS</h5></li>
-                <li class="list-inline-item"><i class="fa-brands fa-bootstrap"></i><h5>Bootstrap</h5></li>
+                <li class="list-inline-item mx-md-3 text-md-center"><i class="fab fa-php" title="PHP"></i><h5>PHP</h5></li>
+                <li class="list-inline-item mx-md-4 text-md-center"><i class="fab fa-symfony" title="Symfony"></i><h5>Symfony</h5></li>
                 <br>
-                <li class="list-inline-item"><i class="fab fa-js-square" title="Javascript"></i><h5>Javascript</h5></li>
-                <li class="list-inline-item"><img src="{{ asset('assets/img/presentation/jquery-icon.svg') }}"><h5>jQuery</h5></li>
+                <li class="list-inline-item mx-md-3 text-md-center"><i class="fab fa-js-square" title="Javascript"></i><h5>Javascript</h5></li>
+                <li class="list-inline-item mx-md-4 text-md-center"><img src="{{ asset('assets/img/presentation/jquery-icon.svg') }}"><h5>jQuery</h5></li>
                 <br>
-                <li class="list-inline-item"><i class="fab fa-php" title="PHP"></i><h5>PHP</h5></li>
-                <li class="list-inline-item"><i class="fab fa-symfony" title="Symfony"></i><h5>Symfony</h5></li>
+                <li class="list-inline-item mx-md-4 text-md-center"><i class="fa-solid fa-database"></i><h5>MySQL</h5></li>
+                <li class="list-inline-item mx-md-4 text-md-center"><i class="fa-solid fa-code"></i><h5>PhpStorm</h5></li>
                 <br>
-                <li class="list-inline-item"><i class="fa-solid fa-database"></i><h5>MySQL</h5></li>
-                <li class="list-inline-item"><i class="fa-solid fa-code"></i><h5>PhpStorm</h5></li>
+                <li class="list-inline-item mx-md-4 text-md-center"><i class="fab fa-html5" title="HTML"></i><h5>HTML</h5></li>
+                <li class="list-inline-item mx-md-4 text-md-center"><i class="fab fa-css3-alt" title="CSS"></i><h5>CSS</h5></li>
+                <li class="list-inline-item mx-md-4 text-md-center"><i class="fa-brands fa-bootstrap"></i><h5>Bootstrap</h5></li>
             </ul>
             <div class="subheading mb-3">Aptitudes</div>
             <ul class="fa-ul mb-0">
@@ -85,7 +90,7 @@
                         <li>MVC maison / PHP / JQuery / Bootstrap 3/4/5 / Twig / MySQL</li>
                         <li>Correction et ajout de fonctionnalités sur les 3 sites principaux de l’entreprise : <br>
                             site interne, site public et site e-commerce BtoB<br>
-                            Plus d'informations dans la section Projets
+                            <i class="fa-solid fa-arrow-right"></i> Plus d'informations dans la page <a href="/projets">Projets</a>
                         </li>
                     </ul>
                 </div>
@@ -98,7 +103,7 @@
     <section class="resume-section" id="education">
         <div class="resume-section-content">
             <h2 class="mb-5">Formations</h2>
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Ecole O'Clock</h3>
                     <div class="subheading mb-3">Formation Développeur web spécialisation PHP/Symfony</div>
@@ -112,6 +117,13 @@
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">Janvier 2022 - Juin 2022</span></div>
             </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <span class="fa-li"><i class="fa-solid fa-award"></i>&nbsp;</span>
+                <ul>
+                    <li><a href="https://www.francecompetences.fr/recherche/rncp/37674/">Titre Professionnel de niveau 5</a> :  Développeur web et web mobile</li>
+                </ul>
+                <div class="flex-shrink-0"><span class="text-primary">Octobre 2022</span></div>
+            </div>
         </div>
     </section>
     <hr class="m-0" />
@@ -119,24 +131,10 @@
     <section class="resume-section" id="interests">
         <div class="resume-section-content">
             <h2 class="mb-5">Centres d'intérêts</h2>
-            <p>Outre ma passion pour les nouvelles technologies et l'informatique, j'ai à la base effectué mes études et la première partie de ma carrière dans un domaine qui me passionne depuis toujours : le cinéma. Je suis aussi très friand de nouvelles découvertes musicales dans les genres pop, rock, et musiques électroniques.</p>
-            <p class="mb-0">J'aime aussi énormément les Lego, les jeux vidéo (narratifs, puzzles, gestion, TPS, etc), le monde de l'automobile ainsi que la question des mobilités, notamment électriques.</p>
-        </div>
-    </section>
-    <hr class="m-0" />
-    
-    <section class="resume-section" id="awards">
-        <div class="resume-section-content">
-            <h2 class="mb-5">Certifications professionnelles</h2>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <span class="fa-li"><i class="fa-solid fa-award"></i>&nbsp;</span>
-                        <p><a href="https://www.francecompetences.fr/recherche/rncp/37674/">Titre Professionnel de niveau 5</a> :  Développeur web et web mobile
-                        <div class="flex-shrink-0"><span class="text-primary">Octobre 2022</span></div>
-                    </div>
-                </li>
-            </ul>
+            <p>Outre ma passion pour les nouvelles technologies et l'informatique, j'ai d'abord fait mes études et la première partie de ma carrière dans un domaine qui me passionne depuis mon enfance : le cinéma.</p>
+            <p>Je suis aussi très friand de nouvelles découvertes musicales dans les genres pop, rock, et musiques électroniques.</p>
+            <p>Je raffole des Lego et de jeux vidéo en tous genres (narratifs, puzzles, gestion, TPS, courses, etc).</p>
+            <p>Je m'intéresse aussi beaucoup au monde de l'automobile et aux nombreux changements qui s'opèrent sur la question des mobilités, notamment électriques.</p>
         </div>
     </section>
 </div>
