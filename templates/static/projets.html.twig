@@ -26,49 +26,74 @@
                             <p class="card-text"><small class="text-muted">Réalisés entre Janvier 2023 et Mai 2024</small></p>
                             
                             <p class="card-text blur-text blur-end">
-                                Durant presque un  an et demi, j'ai été chargé de diverses missions chez Yesss Electrique.<br>
+                                Durant presque un an et demi, j'ai été chargé de diverses missions sur les 3 principaux sites de Yesss Electrique : site public, site interne (Intrayesss) et le site e-commerce BtoB (Yessspro). <br>
                                 Allant de la correction de bug à la création de nouveaux programmes complets, en passant par l'ajout ou la modification de fonctionnalités, voici quelques exemples de mes réalisations.
                             </p>
                             
                             <div class="collapse" id="yesssCollapseContent">
-                                <div id="carouselYesss" class="carousel carousel-dark slide">
+                                <h3>Programmes et fonctionnalités</h3>
+                                
+                                <div id="carouselYesss" class="carousel carousel-dark slide mb-5">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
+                                            <img src="{{ asset('assets/img/projets/yesss/configurateurs.jpeg')}}" class="capture img-fluid rounded w-100" alt="yesss_electrique_excel_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                            <div class="carousel-caption">
+                                                <h4>Configurateurs produits</h4>
+                                                <p class="text-muted carousel-description-text">Créés par les fournisseurs Legrand, Schneider, etc
+                                                <br>Permettent d'obtenir une liste de produits à intégrer directement dans un panier</p>
+                                                <ul>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Intégration en iframe des configurateurs sur les 3 sites</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Création de routes API pour traiter les listes de produits reçues</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Création d'un panier/devis en fonction du contexte</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('assets/img/projets/yesss/historique-client.png')}}" class="capture img-fluid rounded w-100" alt="yesss_electrique_hitoriques_client" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                            <div class="carousel-caption">
+                                                <h4>Historiques client</h4>
+                                                <p class="text-muted carousel-description-text">Refonte complète d'un programme 4 en 1 réunissant différents historiques d'un client :<br>achats facturés (agence et web), commandes web, devis réalisés et consultations de produits en ligne</p>
+                                                <ul>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Création de nouvelles requêtes MySQL</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Mutualisation du code pour les 4 historiques</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Réalisation de la partie Front avec la librairie JS DataTables</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Filtres par fournisseur et catégorie produit</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Création d'un export Excel avec sélection d'options d'export (PHPSpreadsheet)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('assets/img/projets/yesss/echange-produits-agences.png')}}" class="capture img-fluid rounded w-100" alt="yesss_electrique_echange_produits_agences" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                            <div class="carousel-caption w-100">
+                                                <h4>Site interne : déstockage entre agences</h4>
+                                                <p class="text-muted carousel-description-text">Programme permettant à l'utilisateur de voir les références qui ne se vendent pas dans son agence pour les échanger avec une agence qui en aurait besoin.
+                                                    Par défaut le programme affiche, par référence, la liste des agences susceptibles de vendre le mieux la référence.
+                                                </p>
+                                                <ul>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Ajout d'un mode permettant de voir, par agence, les références communes pouvant être échangées</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Refonte de l'export Excel par agence (PHPSpreadsheet)</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Ajout d'exports Excel par Direction Régionale et Direction Générale</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
                                             <img src="{{ asset('assets/img/projets/yesss/stocks.png')}}" class="capture img-fluid rounded w-100" alt="yesss_electrique_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">
                                             <div class="carousel-caption w-100">
                                                 <h4>Site interne : consultation des stocks des plateformes logistiques</h4>
                                                 <ul>
                                                     <li><i class="fa-solid fa-arrow-right"></i> Dynamisation de la liste des plateformes et des fournisseurs produits</li>
                                                     <li><i class="fa-solid fa-arrow-right"></i> Gestion de l'affichage de toutes les plateformes et sélection multiple des fournisseurs produits</li>
-                                                    <li><i class="fa-solid fa-arrow-right"></i> Ajout de filtres de tri par catégorie produit (jusqu'à 4 niveaux)</li>
-                                                    <li><i class="fa-solid fa-arrow-right"></i> Refonte totale de l'export Excel (image suivante)</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Ajout de filtres par catégorie produit (jusqu'à 4 niveaux)</li>
+                                                    <li><i class="fa-solid fa-arrow-right"></i> Refonte totale de l'export Excel (PHPSpreadsheet)</li>
                                                 </ul>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="{{ asset('assets/img/projets/yesss/excel_stocks_plateformes.png')}}" class="capture img-fluid rounded w-100" alt="yesss_electrique_excel_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">
-                                            <div class="carousel-caption">
-                                                <h4>Export Excel : consultation des stocks plateformes</h4>
-                                                <ul>
-                                                    <li><i class="fa-solid fa-arrow-right"></i> Dynamisation de la liste des plateformes et des fournisseurs produits</li>
-                                                    <li><i class="fa-solid fa-arrow-right"></i> Gestion de l'affichage de toutes les plateformes et sélection multiple des fournisseurs produits</li>
-                                                    <li><i class="fa-solid fa-arrow-right"></i> Ajout de filtres de tri par catégorie produit (jusqu'à 4 niveaux)</li>
-                                                    <li><i class="fa-solid fa-arrow-right"></i> Refonte totale de l'export Excel (image suivante)</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="{{ asset('assets/img/projets/yesss/historique-client.png')}}" class="capture img-fluid rounded w-100" alt="yesss_electrique_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">
-                                            <div class="carousel-caption">
-                                                <h4>Third slide label</h4>
-                                                <p>Some representative placeholder content for the third slide.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselYesss" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Stocks plateformes"></button>
-                                        <button type="button" data-bs-target="#carouselYesss" data-bs-slide-to="1" aria-label="Export Excel Stocks plateformes"></button>
-                                        <button type="button" data-bs-target="#carouselYesss" data-bs-slide-to="2" aria-label="Historiques clients"></button>
+                                        <button type="button" data-bs-target="#carouselYesss" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Configurateurs produits"></button>
+                                        <button type="button" data-bs-target="#carouselYesss" data-bs-slide-to="1" aria-label="Historiques client"></button>
+                                        <button type="button" data-bs-target="#carouselYesss" data-bs-slide-to="2" aria-label="Destockage interne"></button>
+                                        <button type="button" data-bs-target="#carouselYesss" data-bs-slide-to="3" aria-label="Stocks plateformes"></button>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselYesss" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -79,8 +104,6 @@
                                         <span class="visually-hidden">Suivante</span>
                                     </button>
                                 </div>
-                                
-                                {#                                <img src="{{ asset('assets/img/projets/yesss/stocks.png')}}" class="capture img-fluid rounded-start w-100" alt="yesss_electrique_stocks" data-bs-toggle="modal" data-bs-target="#imageModal">#}
                             </div>
                             
                             <div class="d-flex gap-2 flex-wrap align-items-end justify-content-center">
@@ -160,11 +183,9 @@
                             
                             
                             <div class="collapse" id="watchartCollapseContent">
-                                <p class="card-text">Le projet a été réalisé en suivant la méthode Scrum, en quasi totale autonomie, sur 4 sprints d'une semaine chacun durant le mois de juin 2022.</p>
-                                <p class="card-text">
-                                    Les technologies front-end utilisées sont React, Leaflet.
-                                    Pour la partie back-end nous avons créé une API REST avec le framework Symfony avec une base de données en MySQL.
-                                </p>
+                                <p class="card-text">Ce projet a été réalisé dans le cadre de la formation Développeur web, que j'ai suivi à l'école O'clock entre janvier et juin 2022, en suivant la méthode Scrum et en quasi totale autonomie, sur 4 sprints d'une semaine chacun durant le mois de juin 2022.</p>
+                                <p class="card-text">Les technologies front-end utilisées sont React, React-Redux et React Leaflet.</p>
+                                <p>Pour la partie back-end nous avons créé une API REST avec le framework Symfony avec une base de données en MySQL.</p>
                                 <h4 class="card-text">Présentation de l'application à l'ensemble de la promotion sur YouTube :</h4>
                                 <div class="col-12">
                                     <iframe class="video" src="https://www.youtube.com/embed/WjrPnFDAWpw?si=pA7vDZnMfOjTn2jW&amp;start=3797" title="Presentation Watchart" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
